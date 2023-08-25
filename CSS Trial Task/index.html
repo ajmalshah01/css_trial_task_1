@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>CSS Trial Task 1</title>
+
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<style>
+
+h1{
+  text-align: center;
+}
+
+/* Style the css grid */
+.item1 {grid-area: header;}
+.item2 {grid-area: main;}
+.item3 {grid-area: footer;}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'main main main main main main'
+    'footer footer footer footer footer footer';
+  gap: 10px;
+  background-color: #42f598;
+  padding: 10px;
+}
+
+.grid-container > div { 
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+.item1 {background-color: white;}
+.item2 {background-color: lightgray;}
+.item3 {background-color: gray;}
+
+/* Style the navbar */
+.navbar {
+  overflow: hidden;
+  background-color: lightgray;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  color: black;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #666;
+  color: white;
+}
+
+/* Active/current link */
+.navbar a.active {
+  background-color: #666;
+  color: white;
+}
+
+/* Style the main animation */
+.animation {
+  margin: 0px auto;
+  width: 100px;
+  height: 100px;
+  background: cyan;
+  position: relative;
+  animation: mymove 2s infinite;
+}
+
+@keyframes mymove {
+  from {top: 0px;}
+  to {top: 20px;}
+}
+
+/* Style the animation button*/
+.button {
+  border-radius: 8px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 14px;
+  padding: 20px;
+  width: 80%;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin-top: 25%;
+}
+
+/* Style the animation button text */
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 15px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/* Style the footer */
+a{
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  font-family: arial;
+  font-weight: bold;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>CSS Competence Trial Task</h1>
+
+<div class="grid-container">
+  <div class="item1">Header
+    <div class="navbar">
+  <a href="#" class="active">Home</a>
+  <a href="#">About</a>
+  <a href="#">Contact</a>
+    </div>
+  </div>
+  <div class="item2">Main
+    <div class="animation">
+      <button class="button"><span>Hover</span></button>
+    </div>
+  </div>  
+  <div class="item3">Footer <br>
+    <a href="mailto: msalmank012@gmail.com" class="font-weight-bold text-white" target="_blank">© 2023 SALMAN</a>
+</div>
+</div>
+
+</body>
+</html>
